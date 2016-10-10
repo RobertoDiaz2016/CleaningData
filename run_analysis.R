@@ -176,6 +176,7 @@
         formula_list_names <- paste("mean(",names(features),")",sep = "")
         
         
+        
                 
         ## merge datasets 
         # use all=TRUE for full join       
@@ -188,3 +189,5 @@
         # summarise features by activiy and subject
         summarise_(.dots = setNames(formula_list, formula_list_names)) 
         
+        #output dataset
+        print(experiments_summary)
