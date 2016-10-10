@@ -23,7 +23,7 @@ function parameters
 - gyro_acc_z  
 
 **description:** Inertial Signals acceration data for body, gyroscope and total readings  
-**tranformation:** loaded with variable names defined by the columns names for each of the 128 readings columns names  
+**tranformation:** Data loaded with variable names defined by the columns names for each of the 128 readings  
 acceleration col.names key  
 
 - first character - type of acceleration - t = total, b = body, g = gyro  
