@@ -7,18 +7,16 @@ www.coursera.org
 ==================================================================
 
 The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. 
-You should also include a README.md in the repo with your scripts. This repo explains how all of the scripts work and how they are connected.
 ==================================================================
 - 'run_analysis.R': creates a tidydataset for later submission.
-This scipt 
 1. Downloads zip file https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 2. Unzips files corresponding to the original project:
    Human Activity Recognition Using Smartphones Dataset, listed after this project reference below.
 3. From the downloaded sets of files, creates two data sets, one for test data and and one for train data.
-   Each of the data sets has the record format descrbribed in the orignal project, with the following added
-   conditions: Extract only the features measurements indicating means and standard deviations
-               Use descriptive activity names to name the activities 
-               Appropriately label the data set with descriptive variable names.
+   Each of the data sets has the record format descrbribed in the orignal project, with the following added conditions: 
+               - Extract only the features measurements indicating means and standard deviations
+               - Use descriptive activity names to name the activities 
+               - Appropriately label the data set with descriptive variable names.
 	Note: a function is used to create each data set, given similiar record form and location of files.
 4. Merges the the test and train data sets into one.
 5. Creates a second, independent tidy data set with the average of each variable for 
