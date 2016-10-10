@@ -1,28 +1,26 @@
-==================================================================
-Coursera:Getting and Cleaning Data Course Project
-==================================================================
-Roberto Diaz, Jeff Leek, PhD, Roger D. Peng, PhD, Brian Caffo, PhD
+==================================================================  
+Coursera:Getting and Cleaning Data Course Project  
+==================================================================  
+Roberto Diaz, Jeff Leek, PhD, Roger D. Peng, PhD, Brian Caffo, PhD  
 Coursera:Getting and Cleaning Data - John Hopkins University
-www.coursera.org
-==================================================================
-
-The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. 
-==================================================================
-- 'run_analysis.R': creates a tidydataset for later submission.
-1. Downloads zip file https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+www.coursera.org  
+==================================================================  
+The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis.  
+==================================================================  
+'run_analysis.R': creates a tidydataset for later submission.  
+1. Downloads zip file https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip  
 2. Unzips files corresponding to the original project:
-   Human Activity Recognition Using Smartphones Dataset, listed after this project reference below.
+   Human Activity Recognition Using Smartphones Dataset, listed after this project reference below.  
 3. From the downloaded sets of files, creates two data sets, one for test data and and one for train data.
    Each of the data sets has the record format descrbribed in the orignal project, with the following added conditions: 
                - Extract only the features measurements indicating means and standard deviations
                - Use descriptive activity names to name the activities 
                - Appropriately label the data set with descriptive variable names.
-	Note: a function is used to create each data set, given similiar record form and location of files.
-4. Merges the the test and train data sets into one.
-5. Creates a second, independent tidy data set with the average of each variable for 
-   each activity and each subject.
-   
-Use of the original dataset is acknowledged and referenced at the end of this document.
+	Note: a function is used to create each data set, given similiar record form and location of files.  
+4. Merges the the test and train data sets into one.  
+5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.  
+
+**Use of the original dataset is acknowledged and referenced at the end of this document.**
 
 ==============================================================
 Human Activity Recognition Using Smartphones Dataset
