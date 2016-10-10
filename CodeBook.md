@@ -22,8 +22,8 @@ function parameters
 - gyro_acc_y  
 - gyro_acc_z  
 
-**description:** Inertial Signals acceration data for body, gyroscope and total readings  
-**tranformation:** Data loaded with variable names defined by the columns names for each of the 128 readings  
+**description:** inertial Signals acceleration data for body, gyroscope and total readings  
+**tranformation:** data loaded with variable names defined by the columns names for each of the 128 readings  
 acceleration col.names key  
 
 - first character - type of acceleration - t = total, b = body, g = gyro  
@@ -35,7 +35,7 @@ acceleration col.names key
 
 **vector:** feature_labels  
 **description:** 561-feature vector with time and frequency domain variables  
-**tranformation:** Remove - () . , from func for better readability of column names  
+**tranformation:** remove - () . , from func for better readability of column names  
 
 
 **dataset:** features  
