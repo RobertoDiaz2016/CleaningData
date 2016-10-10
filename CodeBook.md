@@ -2,29 +2,29 @@ code book describes the variables
 
 function: create.dataset
 description: function to return a dataset using qualifer for directory and filenames 
-        function parameters
-        - dir - root directory of downloaded files
-        - dsq - data set qualifier - used to designate sub directory or filename 
+function parameters
+- dir - root directory of downloaded files
+- dsq - data set qualifier - used to designate sub directory or filename 
 tranformation: none
 
 datasets: -total_acc_x
-          -total_acc_y
-          -total_acc_z
-          -body_acc_x
-          -body_acc_y
-          -body_acc_z
-          -gyro_acc_x
-          -gyro_acc_y
-          -gyro_acc_z
+-total_acc_y
+-total_acc_z
+-body_acc_x
+-body_acc_y
+-body_acc_z
+-gyro_acc_x
+-gyro_acc_y
+-gyro_acc_z
 description: Inertial Signals acceration data for body, gyroscope and total readings
-             tranformation: loaded with variable names defined by the columns names for each of               the 128 readings
+tranformation: loaded with variable names defined by the columns names for each of               the 128 readings
         	columns names
-        	# acceleration col.names key
-                # first character - type of acceleration t = total, b = body, g = gyro
-                # second character - acceleration abbreviated - a         
-                # third character - direction of measurement - x,y,z
-                # fourth - seventh characters - reading prefix - rdng
-                # eigth - tenth characters - index of one of the 128 readings - 1:128
+# acceleration col.names key
+# first character - type of acceleration t = total, b = body, g = gyro
+# second character - acceleration abbreviated - a         
+# third character - direction of measurement - x,y,z
+# fourth - seventh characters - reading prefix - rdng
+# eigth - tenth characters - index of one of the 128 readings - 1:128
 
 vector: feature_labels
 description: 561-feature vector with time and frequency domain variables
