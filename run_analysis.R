@@ -136,19 +136,21 @@
         }
         
         # data url of zip file
-        zipfileurl <-
-                "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-        download.file(zipfileurl,
-                      destfile = ".\\data\\Human+Activity+Recognition+Using+Smartphones.zip")
+        if(!file.exists(".\\data\\Human+Activity+Recognition+Using+Smartphones.zip")){
+                zipfileurl <-
+                        "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+                download.file(zipfileurl,
+                              destfile = ".\\data\\Human+Activity+Recognition+Using+Smartphones.zip")
+                
+                # timestamp of download
+                dateDownLoaded <- date()
+                
+                # unpack downloaded zip file
+                unzip(zipfile=".\\data\\Human+Activity+Recognition+Using+Smartphones.zip",
+                      exdir=".\\data\\Human+Activity+Recognition+Using+Smartphones")
         
-        # timestamp of download
-        dateDownLoaded <- date()
+        }
         
-        # unpack downloaded zip file
-        unzip(zipfile=".\\data\\Human+Activity+Recognition+Using+Smartphones.zip",
-              exdir=".\\data\\Human+Activity+Recognition+Using+Smartphones")
-        
-
         # create test and train datasets from download directory data using function
                 
         downloaded_files_dir <- ".\\data\\Human+Activity+Recognition+Using+Smartphones\\UCI HAR Dataset\\"
@@ -191,3 +193,9 @@
         
         #output dataset
         print(experiments_summary)
+        
+        
+        
+        
+
+        
