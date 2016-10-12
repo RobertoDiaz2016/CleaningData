@@ -19,49 +19,6 @@
         # For each record it is provided:
                 
 
-        # acceleration col.names key
-        # first character - type of acceleration t = total, b = body, g = gyro
-        # second character - acceleration abbreviated - a         
-        # third character - direction of measurement - x,y,z
-        # fourth - seventh characters - reading prefix - rdng
-        # eigth - tenth characters - index of one of the 128 readings - 1:128
-                
-        #- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
-        # total data
-        total_acc_x <- 
-         read.table(paste(dir,dsq,"\\Inertial Signals\\total_acc_x_",dsq,".txt",sep="")
-                    ,col.names = paste("taxrdng",seq(128),sep = ""))
-        total_acc_y <- 
-         read.table(paste(dir,dsq,"\\Inertial Signals\\total_acc_y_",dsq,".txt",sep="")
-                    ,col.names = paste("tayrdng",seq(128),sep = ""))
-        total_acc_z <- 
-         read.table(paste(dir,dsq,"\\Inertial Signals\\total_acc_z_",dsq,".txt",sep="")
-                    ,col.names = paste("tazrdng",seq(128),sep = ""))
-        
-        # body data
-        body_acc_x <- 
-         read.table(paste(dir,dsq,"\\Inertial Signals\\body_acc_x_",dsq,".txt",sep="")
-                    ,col.names = paste("baxrdng",seq(128),sep = ""))
-        body_acc_y <- 
-         read.table(paste(dir,dsq,"\\Inertial Signals\\body_acc_y_",dsq,".txt",sep="")
-                    ,col.names = paste("bayrdng",seq(128),sep = ""))
-        body_acc_z <- 
-         read.table(paste(dir,dsq,"\\Inertial Signals\\body_acc_z_",dsq,".txt",sep="")
-                    ,col.names = paste("bazrdng",seq(128),sep = ""))
-        
-        #- Triaxial Angular velocity from the gyroscope. 
-        # gyro data
-        gyro_acc_x <- 
-         read.table(paste(dir,dsq,"\\Inertial Signals\\body_gyro_x_",dsq,".txt",sep="")
-                    ,col.names = paste("gaxrdng",seq(128),sep = ""))
-        gyro_acc_y <- 
-         read.table(paste(dir,dsq,"\\Inertial Signals\\body_gyro_y_",dsq,".txt",sep="")
-                    ,col.names = paste("gayrdng",seq(128),sep = ""))
-        gyro_acc_z <- 
-         read.table(paste(dir,dsq,"\\Inertial Signals\\body_gyro_z_",dsq,".txt",sep="")
-                    ,col.names = paste("gazrdng",seq(128),sep = ""))
-        
-
         #- A 561-feature vector with time and frequency domain variables.
         feature_labels <- 
                 read.table(paste(dir,"features.txt",sep = "")
@@ -107,15 +64,6 @@
                            ,subjects
                            ,activities
                            ,activityname
-                           ,body_acc_x
-                           ,body_acc_y
-                           ,body_acc_z
-                           ,gyro_acc_x
-                           ,gyro_acc_y
-                           ,gyro_acc_z
-                           ,total_acc_x
-                           ,total_acc_y
-                           ,total_acc_z
                            ,features
         )
         
@@ -135,7 +83,7 @@
                 dir.create("data")
         }
         
-        # data url of zip file
+        # check for zip file
         if(!file.exists(".\\data\\Human+Activity+Recognition+Using+Smartphones.zip")){
                 zipfileurl <-
                         "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
