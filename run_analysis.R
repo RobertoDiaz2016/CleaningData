@@ -71,6 +71,7 @@
 
 
         ## Install and load packages
+        print("Install and loading packages if necessary ...")
         if("dplyr" %in% rownames(installed.packages()) == FALSE){
                 install.packages("dplyr")
         }         
@@ -78,6 +79,7 @@
         
         
         ## Unzip files from url to a data directory in your working directory
+        print("Unzipping files if necessary ...")
         # Check for data directory
         if(!file.exists("data")){
                 dir.create("data")
@@ -100,7 +102,7 @@
         }
         
         # create test and train datasets from download directory data using function
-                
+        print("Creating test and train datasets ...")
         downloaded_files_dir <- ".\\data\\Human+Activity+Recognition+Using+Smartphones\\UCI HAR Dataset\\"
         
         data_set_qualifier <- "test"
@@ -113,7 +115,7 @@
         
 
         
-        
+        print("Merging test and train datasets ...")
         ## Merge test and train datasets
         # accomplishes 1. and 5. from above
         
@@ -132,7 +134,7 @@
         # use all=TRUE for full join       
         experiments <- merge(test,train,all=TRUE)
         
-
+        print("Summarizing new dataset ...")
         # group and summarize dataset
         # group by activiy and subject
         experiments_summary <- experiments %>% group_by(activityname,subjectid) %>%
@@ -140,7 +142,8 @@
         summarise_(.dots = setNames(formula_list, formula_list_names)) 
         
         #output dataset
-        print(experiments_summary)
+        print("View tidy dataset")
+        View(experiments_summary)
         
         
         
